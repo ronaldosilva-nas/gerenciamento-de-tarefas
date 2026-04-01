@@ -21,6 +21,7 @@ export class Task {
   }
 
   addTask(task: TaskModel): void {
+    task.id = this.tasks.length + 1;
     this.tasks.push(task);
     this.saveToLocalStorange();
   }
